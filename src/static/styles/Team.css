@@ -1,0 +1,91 @@
+.logo-div {
+  display: inline-block;
+  vertical-align: center;
+}
+
+.intro-text {
+  display: inline-block;
+  width: 600px;
+  vertical-align: center;
+  color: white;
+  padding-left: 50px;
+}
+
+h1 {
+  font-size: 80px;
+}
+
+.div1 {
+  padding-top: 90px;
+  position: relative;
+  text-align: center;
+  padding-bottom: 20px;
+  overflow: visible;
+  z-index: 1000;
+}
+
+.grad {
+  background-image: linear-gradient(to bottom, #1976d2, #98acf8);
+  min-width: 100%;
+  min-height: 100vh;
+}
+
+.title-text {
+  text-align: center;
+  padding-top: 50px;
+  font-weight: lighter;
+  font-size: 72px;
+  color: white;
+  overflow: visible;
+  z-index: 1000;
+}
+
+p {
+  font-size: 25px;
+}
+
+.foot {
+  text-align: center;
+  font-size: 15px;
+  color: white;
+  padding-bottom: 50px;
+  background-color: black;
+}
+
+.discover {
+  color: #1976d2;
+  background-color: white;
+  border-radius: 15px;
+  margin-right: 20%;
+  margin-left: 20%;
+  padding-top: 8px;
+  padding-bottom: 5px;
+  text-align: center;
+  vertical-align: center;
+  overflow: visible;
+  z-index: 1000;
+}
+
+.bodyTextA {
+  vertical-align: center;
+}
+
+.teamP {
+  text-align: center;
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-size: 60px;
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+.foot {
+  background-color: transparent;
+  color: black;
+  font-family: "Inter", sans-serif;
+  margin-bottom: -20px;
+}
+
+.cds {
+  text-align: center;
+}
