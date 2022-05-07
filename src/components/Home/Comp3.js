@@ -5,7 +5,7 @@ const Comp3 = () => {
   let [professors=["Michael Clarkson", "David Gries", "Walker White"], setProfessors] = useState();
   const [reviews=["Love Him!", "He is amazing!", "He is my favorite professor!!"], setReviews] = useState();
   useEffect(() => {
-    fetch('/all_professors_home').then(res => res.json()).then(data => {
+    fetch('https://census-backend.herokuapp.com/all_professors_home').then(res => res.json()).then(data => {
       const AS=data.all_professors_home
       console.log(AS);
       setProfessors(AS.map((name) => <strong><p style={{fontSize: "40px"}}>{name[0]}</p></strong>));
