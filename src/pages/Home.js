@@ -51,6 +51,7 @@ function Home() {
             
         </div>
         <Comp1 />
+        
         <Comp3 />
 
         <Footer/>

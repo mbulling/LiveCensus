@@ -13,7 +13,7 @@ function Gym() {
 
  
   useEffect(() => {
-    fetch('https://census-backend.herokuapp.com/pull_gyms').then(res => res.json()).then(data => {
+    fetch('/pull_gyms').then(res => res.json()).then(data => {
       setGymData(data.gym_list);
       setLine(<Line gym_data={data.gym_list}></Line>)
     });
@@ -23,6 +23,9 @@ function Gym() {
     <div>
       <Nvbar />
       <div className="grad">
+        <div className="upper">
+        <strong><p style={{fontSize:"70px"}}>Gym Trends</p></strong>
+        </div>
         {line}
         <br></br>
         <div className="cds">

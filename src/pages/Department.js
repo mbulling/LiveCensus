@@ -19,7 +19,7 @@ const Department = () => {
 
  
     useEffect(() => {
-      fetch('https://census-backend.herokuapp.com/all_subjects').then(res => res.json()).then(data => {
+      fetch('/all_subjects').then(res => res.json()).then(data => {
         const AS = data.all_subjects
         setOptionItems(AS.map((subject) => <option key={subject}>{subject}</option>));
       });
@@ -38,10 +38,10 @@ const Department = () => {
       allClass = new Array(100);
       setInfo(e.target.value)
       const params = {c:e.target.value}
-      fetch(`https://census-backend.herokuapp.com/get_abbrev?c=${encodeURIComponent(params.c)}`).then(res => res.json()).then(data => {
+      fetch(`/get_abbrev?c=${encodeURIComponent(params.c)}`).then(res => res.json()).then(data => {
           setAbbrev(data.abb);
           const params2 = {cA:data.abb}
-          fetch(`https://census-backend.herokuapp.com/get_median_info?cA=${encodeURIComponent(params2.cA)}`).then(res => res.json()).then(data => {
+          fetch(`/get_median_info?cA=${encodeURIComponent(params2.cA)}`).then(res => res.json()).then(data => {
             const med_info = data.allInfo;
             allClass = data.allInfo;
             setCardItems(med_info.map((info, index) => 
@@ -70,15 +70,15 @@ const Department = () => {
           <Navbar />
           <div className="grad">
             <div className="upper">
-              <h1>{departmentName}</h1>
-              <h1>{abbrev}</h1>
+            <strong><p style={{fontSize:"60px"}}>{departmentName}</p></strong>
+            <strong><p style={{}}>{abbrev}</p></strong>
               <div><select onChange={e => handleChange(e)} className='react-select-div'>{optionItems}</select></div>
             </div>
             <br></br>
             <div>
               {donut}
-              <br></br><br></br>
-              <div className="upper"><h2>All Classes</h2></div>
+
+              <div className="upper"><strong><p style={{}}>All Classes:</p></strong></div>
               <Row className="card-gr" xs={3} md={4}>
                   {cardItems}
               </Row>

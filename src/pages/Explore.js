@@ -2,7 +2,13 @@ import '../static/styles/master.css';
 import '../static/styles/Explore.css';
 import Nvbar from '../components/Navbar.js';
 import Footer from '../components/Footer.js';
-
+import Card from 'react-bootstrap/Card';
+import Row from 'react-bootstrap/Row';
+import square from '../static/img/temp_square.png';
+import gym from '../static/img/gymIcon.png';
+import poll from '../static/img/pollIcon.png';
+import prof from '../static/img/profIcon.png';
+import course from '../static/img/courseIcon.png';
 
 function Explore() {
 
@@ -10,47 +16,35 @@ function Explore() {
     <div>
       <Nvbar />
       <div className="grad">
-        <strong><p className="teamP">Explore Cornell Census</p></strong>
-        <div className="cont1">
-            <div className="contents-left">
-                <strong><p className="div-title">Courses</p></strong>
-                <p>CS 3410</p>
-                <p>CS 3110</p>
-                <p>CS 2112</p>
-            </div>
-            <div className="contents-right">
-            <a href="/department"><strong><p>See All Courses</p></strong></a>
-            </div>
-        </div>
-        <br></br>
+        <strong><p style={{textAlign: "center", fontSize:"50px", color:"white", paddingTop:"20px"}}>Explore CornellCensus</p></strong>
+        <Row className="card-gr" xs={2} md={3}>
+          <Card className="card-zt"><br></br>
+            <Card.Title><strong><p style={{paddingTop:"20px", fontSize:"35px", color:"#1976d2"}}>Courses</p></strong></Card.Title> 
+            <img src={course} width={200}></img>
+            
+            <a href="/department"><strong><p className="discover2">See All Courses</p></strong></a>
+          </Card>
+          <Card className="card-zt"><br></br>
+          <Card.Title><strong><p style={{paddingTop:"20px", fontSize:"35px", color:"#1976d2"}}>Professors</p></strong></Card.Title>
+          <img src={prof} width={200}></img>
+          <Row className="alty" xs ={3}>
+          <a href="/50best"><strong><p className="discover2">Top 50</p></strong></a>
+          <a href="/50worst"><strong><p className="discover2">Low 50</p></strong></a>
+          <a href="/professorranking"><strong><p className="discover2">Sorted</p></strong></a>
+          </Row>
+          </Card>
+          <Card className="card-zt"><br></br>
+          <Card.Title><strong><p style={{paddingTop:"20px", fontSize:"35px", color:"#1976d2"}}>Gym Data</p></strong></Card.Title>
+          <img src={gym} width={200}></img>
+          <a href="/gym"><strong><p className="discover2">See Gym Data</p></strong></a>
+          </Card>
+          <Card className="card-zt"><br></br>
+          <Card.Title><strong><p style={{paddingTop:"20px", fontSize:"35px", color:"#1976d2"}}>Poll Data</p></strong></Card.Title>
+          <img src={poll} width={200}></img>
+          <a href="/poll"><strong><p className="discover2">See All Polls</p></strong></a>
+          </Card>
+        </Row>
 
-        <div className="cont1">
-            <div className="contents-left">
-                <strong><p className="div-title">Professors</p></strong>
-                <a href="/50best"><p>View 50 Highest Rated Cornell Professors</p></a>
-                <a href="/50worst"><p>View 50 Worst Rated Cornell Professors</p></a>
-                <a href="/professorranking"><p>View All Professors By Rating</p></a>
-            </div>
-            <div className="contents-right">
-            <a href="/professors"><strong><p>See All Professors</p></strong></a>
-            </div>
-        </div>
-
-        <br></br>
-
-        <div className="cont1">
-          <div className="contents-left">
-            <strong><p className="div-title">Gym Occupancies</p></strong>
-            <p>Gym 1</p>
-            <p>Gym 2</p>
-            <p>Gym 3</p>
-          </div>
-          <div className="contents-right">
-            <a href="/gym"><strong><p>See All Gyms</p></strong></a>
-          </div>
-        </div>
-
-        <br></br>
         <div className="cds">
           In collaboration with Cornell Data Science.
           <Footer />
