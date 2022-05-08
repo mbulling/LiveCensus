@@ -15,7 +15,7 @@ const Poll = () =>  {
   const [pollItem, setPollItems] = useState();
 
   useEffect(() => {
-    fetch('/get_polls').then(res => res.json()).then(data => {
+    fetch('https://census-backend.herokuapp.com/get_polls').then(res => res.json()).then(data => {
       const PI = data.pollInfo
       console.log(PI)
       setPollItems(PI.map((info) => 
